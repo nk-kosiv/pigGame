@@ -1,5 +1,5 @@
 # pigGame
-Simple Pig Game
+
 GAME RULES:
 
 - The game has 2 players, playing in rounds
