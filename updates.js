@@ -18,14 +18,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 	document.getElementById('dice-1').src = 'dice-' + dice1 + '.png'
 	document.getElementById('dice-2').src = 'dice-' + dice2 + '.png'
 
-	//3. Update the round score IF rolled number is not a 1
-	// if (dice === 6 && lastDice === 6) {
-	// 	//Playr looses score
-	// 	scores[activePlayer] = 0;
-	// 	document.querySelector('#score-' + activePlayer).textContent = '0';
-	// 	nextPlayer();
 
-	// } else 
 	if (dice1 !== 1 && dice2 !== 1) {
 		//Add score
 		roundScore += dice1;
@@ -34,9 +27,13 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
 	} else {
 		nextPlayer();
+		document.getElementById('dice-1').style.display = 'block';
+		document.getElementById('dice-2').style.display = 'block';
+		document.getElementById('dice-1').src = 'dice-1.png';
+		document.getElementById('dice-2').src = 'dice-1.png';
 	}
 
-	// lastDice = dice;
+	
 	}
 });
 
